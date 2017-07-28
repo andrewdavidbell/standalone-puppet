@@ -44,6 +44,8 @@ The SOE demonstrates a Puppet configuration being applied to a node at reqular i
 * Networking
     * Private Network
         * All instances on same subnet
+    * A specific IP address is required to support NFS because [DHCP won't work.](http://stackoverflow.com/questions/39354221/how-to-set-up-a-shared-vagrant-directory-on-an-osx-vagrant-box)
+Also, to prevent another VirtualBox Adapter being created the address assigned is in range of the DHCP server of VirtualBox Host-only Adapter.
     * Application ports also forwarded for convenience
 * Synced Folders
     * NFS shared directories (Private Network required)
