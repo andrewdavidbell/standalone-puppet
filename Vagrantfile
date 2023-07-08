@@ -41,7 +41,7 @@ Vagrant.configure("2") do |config|
     ast.vm.network "private_network", ip: "172.28.128.4"
     ast.vm.network "forwarded_port", guest: 22, host: 2210, id: 'ssh'
 
-    configure_provisioner ast, { "role" => "soe" }
+    #configure_provisioner ast, { "role" => "soe" }
   end
 
   config.vm.define "inventory" do |inv|
